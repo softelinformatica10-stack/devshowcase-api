@@ -8,11 +8,11 @@ export const swaggerSpec = swaggerJSDoc({
       version: "1.0.0",
       description: "API para apresentação de projetos de desenvolvimento."
     },
-    servers: [
-      {
-        url: "http://localhost:3333"
-      }
-    ]
+   servers: [
+  {
+    url: process.env.RENDER_EXTERNAL_URL || "http://localhost:3333"
+  }
+]
   },
   apis: ["./src/routes/*.ts"]
 });
